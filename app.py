@@ -166,7 +166,9 @@ with col2:
     if evento and evento.get("last_object_clicked_popup"):
         sede_seleccionada = evento["last_object_clicked_popup"]
         st.session_state.sede_activa = sede_seleccionada
-        st.experimental_rerun()
+        
+        # CORRECCIÓN: Usar st.rerun() en lugar de st.experimental_rerun()
+        st.rerun()
 
 # Mostrar gráficos si hay sede seleccionada
 if sede_seleccionada:
