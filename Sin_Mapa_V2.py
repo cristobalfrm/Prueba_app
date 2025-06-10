@@ -29,8 +29,8 @@ sedes = [f.stem.replace("_graficos", "") for f in archivos]
 
 # Incluir “Nacional” si existe
 nacional_path = BASE_PATH / "Nacional.png"
-if nacional_path.exists() and "Nacional" not in sedes:
-    sedes.insert(0, "Nacional")
+#if nacional_path.exists() and "Nacional" not in sedes:
+    #sedes.insert(0, "Nacional")
 
 sede_seleccionada = st.sidebar.selectbox("Sede:", sedes)
 
