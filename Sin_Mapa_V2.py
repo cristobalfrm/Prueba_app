@@ -28,7 +28,7 @@ archivos = sorted(GRAFICOS_DIR.glob("*_graficos.png"))
 sedes = [f.stem.replace("_graficos", "") for f in archivos]
 
 # Incluir “Nacional” si existe
-nacional_path = GRAFICOS_DIR / "Nacional.png"
+nacional_path = BASE_PATH / "Nacional.png"
 if nacional_path.exists() and "Nacional" not in sedes:
     sedes.insert(0, "Nacional")
 
@@ -81,4 +81,4 @@ with col2:
 
 # Pie de página
 st.markdown("---")
-st.caption("Dashboard desarrollado por Cris | Junio 2025")
+st.caption("Dashboard desarrollado por Cristóbal Reyes M. | Junio 2025")
